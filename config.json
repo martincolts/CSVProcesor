@@ -1,0 +1,16 @@
+{
+  "config":[
+    {
+      "id":"column1",
+      "value":"LAST"
+    },
+    {
+      "id":"column2",
+      "value":"AVERAGE"
+    },
+    {
+      "id":"column3",
+      "value":"REPEAT"
+    }
+  ]
+}
