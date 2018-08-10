@@ -1,4 +1,4 @@
-from ProcesorAbs import Procesor
+from Procesors.ProcesorAbs import Procesor
 import numpy as np
 
 class MostRepeatedProcesor(Procesor):
