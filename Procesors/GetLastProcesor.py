@@ -8,5 +8,7 @@ class GetLastProcesor(Procesor):
         self.values=[]
 
     def process (self):
-        return self.values[-1]
+        result = self.values[-1]
+        self.values = []
+        return result
 

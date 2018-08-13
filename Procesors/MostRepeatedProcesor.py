@@ -9,7 +9,9 @@ class MostRepeatedProcesor(Procesor):
 
     def process (self):
         counts = np.bincount(self.values)
-        return np.argmax(counts)
+        result = np.argmax(counts)
+        self.values = []
+        return result
 
 
 

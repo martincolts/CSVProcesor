@@ -16,9 +16,9 @@ class ProcesorCreator:
             self.createProcesorList(value)
 
     def createProcesorList(self, value):
-        type=value["id"]
+        type=value["value"]
         procesor=self.procesorFounder.getProcesor(type)
-        pc = ProcesorContainer(type,procesor)
+        pc = ProcesorContainer(value["id"],procesor)
         self.procesorList.append(pc)
 
     def getProcesorList(self):

@@ -8,4 +8,6 @@ class AverageProcesor(Procesor):
         self.values=[]
 
     def process (self):
-        return int(np.mean(self.values, axis=0))
+        result = int(np.mean(self.values, axis=0))
+        self.values = []
+        return result
