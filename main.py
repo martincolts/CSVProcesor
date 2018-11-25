@@ -1,23 +1,24 @@
 from Strategy.ProcesorCreator import ProcesorCreator
 import pandas as pd
+
 import csv
 
 #parameters
-pace = 3
-fileInput = "testFile.csv"
-fileToSave="outFile.csv"
+pace = 70
+fileInput = "file5_25.csv"
+fileToSave="f5_25.csv"
+
+
+print ("Started executed with params:")
+print("Pace: ", pace)
+print("File in: ", fileInput)
+print("File out: ", fileToSave)
 
 pc = ProcesorCreator()
 
 data = pd.read_csv(fileInput)
-
 procesors = pc.getProcesorList()
-print (data.columns.values.tolist()[0])
 
-for index, row in data.iterrows():
-    print(row['column1'])
-
-print(procesors[0].value)
 with open(fileToSave, 'w', newline='') as outFile:
     writeFile = csv.writer(outFile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
     for index, row in data.iterrows():
